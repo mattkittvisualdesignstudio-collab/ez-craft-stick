@@ -47,11 +47,11 @@
           </figure>
           <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
             <img src="assets/img/hero-snowflake-doorway.jpg" alt="White and silver ribbon door hanger with snowflakes on a dark front door with lanterns" width="1672" height="941" loading="lazy">
-            <figcaption>Snowflake door hanger</figcaption>
+            <figcaption>Idea: snowflake door hanger</figcaption>
           </figure>
           <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
             <img src="assets/img/hero-icy-winter-table.jpg" alt="White and silver ribbon table runner with snowflakes and candles on a long dining table" width="1672" height="941" loading="lazy">
-            <figcaption>Icy winter table runner</figcaption>
+            <figcaption>Idea: icy winter table runner</figcaption>
           </figure>
         </div>
         <div class="hero__fade" aria-hidden="true"></div>
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div class="hero__bar">
-        <p class="carousel__note">Real pieces. Scenes styled with AI.</p>
+        <p class="carousel__note">Some real pieces, some AI-generated ideas. Scenes styled with AI.</p>
         <div class="carousel__controls">
           <button type="button" class="carousel__btn" data-carousel="pause" aria-controls="hero-carousel" aria-label="Pause slideshow">
             <svg viewBox="0 0 20 20" aria-hidden="true"><rect class="i-pause" x="5" y="4" width="3.5" height="12" rx="1"/><rect class="i-pause" x="11.5" y="4" width="3.5" height="12" rx="1"/><path class="i-play" d="M6 4l10 6-10 6z"/></svg>
@@ -251,7 +251,7 @@
     <section class="pieces" id="pieces" aria-labelledby="pieces-title">
       <div class="pieces__head">
         <h2 id="pieces-title">Pieces made with the stick</h2>
-        <p>Our family made every piece here. Door hangers and centerpieces use one stick; the runner uses two with a candle between them.</p>
+        <p>Our family made every piece here. Most use one stick; longer pieces, like the runner, use two.</p>
       </div>
       <div class="mosaic">
         <figure class="tile tile--tall">
@@ -692,7 +692,7 @@
       <div class="buy__inner">
         <div class="buy__main">
           <h2 id="buy-title">Order on Etsy</h2>
-          <p>Our shop is on Etsy, so checkout, payment and shipping all happen there. Pick what you want and we'll take you straight to that part of the shop.</p>
+          <p>Our shop is opening soon on Etsy, and checkout, payment and shipping will all happen there. Pick what you want and we'll take you straight to that part of the shop.</p>
           <button type="button" class="btn btn--primary btn--light" data-open-order>Choose what to order</button>
         </div>
         <div class="buy__updates" id="updates">
@@ -732,8 +732,8 @@
 
   <footer class="site-footer">
     <span class="wordmark wordmark--small"><span class="wordmark__ez">EZ</span><span class="wordmark__name">Craft Stick</span></span>
-    <p>Made by our family for yours. EZ-CarSeat is a registered trademark. Images marked "styled with AI" are AI-made scenes based on real pieces.</p>
-    <p>&copy; 2026 EZ Craft Stick</p>
+    <p>Made by our family for yours. EZ-CarSeat is a registered trademark. Images marked "styled with AI" are AI-made scenes. Some show real pieces and some show ideas.</p>
+    <p>&copy; 2026 Kitt Enterprises LLC</p>
   </footer>
 
   <!-- ORDER DIALOG: each choice opens the matching section of the Etsy shop -->
@@ -744,16 +744,11 @@
       </button>
     </form>
     <h2 id="order-dialog-title">What would you like to order?</h2>
-    <p class="order-dialog__lede">You'll finish your purchase on our Etsy shop. It opens in a new tab, and checkout, payment and shipping are handled there.</p>
+    <p class="order-dialog__lede">Sticks and finished pieces are sold on our Etsy shop, which opens in a new tab. Checkout, payment and shipping are handled there.</p>
     <ul class="choices" role="list">
       <li><a class="choice" data-etsy="stick" href="#" target="_blank" rel="noopener">
         <img src="assets/img/stick-black-3d.png" alt="">
-        <span><strong>EZ Craft Stick</strong><span>The stick and the printed DIY guide</span></span>
-        <svg class="choice__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
-      </a></li>
-      <li><a class="choice" data-etsy="kit" href="#" target="_blank" rel="noopener">
-        <img src="assets/img/white-gold-table-swag.jpg" alt="">
-        <span><strong>Starter kit</strong><span>Stick, guide, ribbon and tulle for one piece</span></span>
+        <span><strong>EZ Craft Stick</strong><span>The stick, plus the DIY guide as a download</span></span>
         <svg class="choice__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
       </a></li>
       <li><a class="choice" data-etsy="finished" href="#" target="_blank" rel="noopener">
@@ -762,6 +757,11 @@
         <svg class="choice__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
       </a></li>
     </ul>
+    <!-- TODO: supply kits will be groupings of ribbon, tulle and accents on Amazon (affiliate links). Point this at the kits page once it exists. -->
+    <div class="kits-note">
+      <img src="assets/img/white-gold-table-swag.jpg" alt="">
+      <p><strong>Supply kits are coming soon.</strong> We're putting together sets of ribbon, tulle and accents you can buy on Amazon to go with your stick.</p>
+    </div>
     <p class="order-dialog__soon" role="status" hidden>Our Etsy shop opens soon. Leave your email in "Not ready to order?" and we'll tell you when it's live.</p>
     <p class="order-dialog__all"><a data-etsy="shop" href="#" target="_blank" rel="noopener">Browse the whole Etsy shop</a></p>
   </dialog>

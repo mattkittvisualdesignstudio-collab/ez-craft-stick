@@ -6,5 +6,6 @@
 - This is also the first test of Matt's "Launch Tool" idea: using AI to launch a small product business. Note any repeatable steps.
 - Stack: static HTML/CSS/JS, no build step. Keep it that way unless Matt asks otherwise, so it can move between hosts.
 - Don't use emoji anywhere in the UI or copy.
+- Selling: sticks and finished pieces on Etsy; supply kits will be Amazon affiliate groupings, not built or sold by us. The DIY guide is a download (later emailed), not printed in the box.
 - Keep real photos separate from AI-generated images. AI scenes use the `styled-` file prefix and must say "styled with AI" in their caption.
 - Open items are in README.md under "Before it goes live".

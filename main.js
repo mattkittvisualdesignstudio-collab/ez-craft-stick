@@ -8,7 +8,6 @@
 const ETSY = {
   shop: "",
   stick: "",    // section: EZ Craft Sticks
-  kit: "",      // section: Starter kits
   finished: "", // section: Finished pieces
 };
 

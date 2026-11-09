@@ -10,7 +10,7 @@ It's plain HTML, CSS and JavaScript: no framework and no build step. To preview 
 |---|---|
 | `index.html` | All page content and copy |
 | `styles.css` | Colors, type and layout. The palette is defined at the top. |
-| `main.js` | Sticky header, hero slideshow, step-by-step diagram, Etsy order pop-up, updates sign-up. Etsy links live in `ETSY` at the top. |
+| `main.js` | Sticky header, hero slideshow, step-by-step diagram, order pop-up, updates sign-up. Etsy links live in `ETSY` at the top. |
 | `assets/img/` | Real product photos, AI-styled scenes (`styled-*.jpg`), the black stick render, the original EZ-CarSeat ad, the guide cover |
 | `assets/ez-craft-stick-diy-guide.pdf` | The rebranded DIY guide (source is in the `guide/` folder next to `website/`) |
 | `makers.html` | Meet the makers page. Not linked from the home page yet. |
@@ -20,11 +20,14 @@ It's plain HTML, CSS and JavaScript: no framework and no build step. To preview 
 
 ## Before it goes live
 
-- [ ] **Etsy links.** Paste the shop link and the three section links (sticks, starter kits, finished pieces) into `ETSY` at the top of `main.js`. Until then the order pop-up says the shop opens soon.
+- [ ] **Etsy links.** Paste the shop link and the two section links (sticks, finished pieces) into `ETSY` at the top of `main.js`. Until then the order pop-up says the shop opens soon. When the shop is live, change "Our shop is opening soon on Etsy" back to "Our shop is on Etsy."
+- [ ] **Email the DIY guide to buyers.** The stick ships without a printed guide. For now buyers get it as a download. Next step: send it by email automatically after each order. Simple options are a link in Etsy's message to buyers on each receipt, a small card in the package with a QR code to the guide, or an email service connected to the website.
+- [ ] **Supply kits on Amazon (affiliate).** No kits are built or sold here. Instead, make a kits page that groups ribbon, tulle and accents as Amazon affiliate links, and point the "Supply kits are coming soon" note in the order pop-up at it. Amazon requires the line "As an Amazon Associate I earn from qualifying purchases" on any page with those links.
 - [ ] **Updates sign-up.** Set `FORM_ENDPOINT` in `main.js` to a mailing list or form service. Right now it only shows a thank-you message.
 - [ ] **Idea images.** The "One stick, a look for every season" cards use drawn placeholders. Swap each one for an idea image when you have it, and keep the "Idea" badge.
 - [ ] **Reels.** The "Watch one come together" section is in the page but hidden. When the videos and Instagram account exist, remove `hidden` from that section.
 - [ ] **Makers page.** `makers.html` has placeholders for names, a photo and a quote. Link it from the nav or footer when it's ready.
+- [ ] **Content review, items 8 to 22.** Wording fixes from the Nov 8 content check (site, guide, makers page and Etsy plan) are waiting for a go-ahead.
 - [ ] **Car seat warning.** Have the wording checked by someone who knows product liability.
 - [ ] **Real product photo.** The stick image is rendered from the 3D model. Swap in a real photo of a black stick when you have one.
 - [ ] **Domain.** Point a domain at whichever host you choose.
