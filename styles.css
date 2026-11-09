@@ -126,6 +126,43 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 .reel__caption { position: absolute; left: .9rem; right: .9rem; bottom: .9rem; color: #fff; font-weight: 600; font-size: var(--step--1); line-height: 1.3; z-index: 1; }
 .reels__soon { margin: .75rem 0 0; color: var(--ink-soft); font-size: var(--step--1); }
 
+
+/* ---------- Design ideas: continuous scrolling gallery ---------- */
+.design-ideas { padding: clamp(3.5rem, 8vw, 6rem) 0 0; overflow: hidden; }
+.design-ideas__head { max-width: var(--max); margin: 0 auto 1.75rem; padding: 0 var(--gutter); display: grid; grid-template-columns: auto 1fr auto; gap: 1rem 2rem; align-items: end; }
+.design-ideas__head h2 { font-size: var(--step-3); }
+.design-ideas__head p { margin: 0; color: var(--ink-soft); max-width: 52ch; }
+.design-ideas__pause .i-play { display: none; }
+.design-ideas.is-paused .design-ideas__pause .i-play { display: inline; }
+.design-ideas.is-paused .design-ideas__pause .i-pause { display: none; }
+.design-ideas__viewport { overflow: hidden; }
+.design-ideas__track { display: flex; width: max-content; animation: ideas-scroll 140s linear infinite; }
+.design-ideas__set { list-style: none; margin: 0; padding: 0 6px 0 0; display: flex; gap: 6px; }
+.design-ideas:hover .design-ideas__track,
+.design-ideas:focus-within .design-ideas__track,
+.design-ideas.is-paused .design-ideas__track { animation-play-state: paused; }
+@keyframes ideas-scroll { to { transform: translateX(-50%); } }
+.idea-tile { position: relative; width: clamp(220px, 22vw, 300px); aspect-ratio: 1 / 1; border-radius: 6px; overflow: hidden; background: var(--tulle); flex: none; }
+.idea-tile img { width: 100%; height: 100%; object-fit: cover; }
+.idea-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(32,10,28,.78) 0%, rgba(32,10,28,0) 42%); pointer-events: none; }
+.idea-tile__cap { position: absolute; left: .85rem; right: .85rem; bottom: .75rem; z-index: 1; color: #fff; display: grid; line-height: 1.25; }
+.idea-tile__cap strong { font-family: var(--serif); font-weight: 400; font-size: 1.05rem; }
+.idea-tile__cap span { font-size: .78rem; font-style: italic; opacity: .9; }
+/* reduced motion: no drift; a swipeable row instead, without the duplicate set */
+@media (prefers-reduced-motion: reduce) {
+  .design-ideas__track { animation: none; }
+  .design-ideas__viewport { overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 var(--gutter); }
+  .design-ideas__set[aria-hidden="true"] { display: none; }
+  .idea-tile { scroll-snap-align: start; }
+  .design-ideas__pause { display: none; }
+}
+@media (max-width: 720px) {
+  .design-ideas__head { grid-template-columns: 1fr auto; }
+  .design-ideas__head p { grid-column: 1 / -1; grid-row: 2; }
+  .idea-tile { width: 62vw; }
+  .design-ideas__track { animation-duration: 110s; }
+}
+
 /* ---------- The stick ---------- */
 .stick { max-width: var(--max); margin: 0 auto; padding: clamp(3.5rem, 8vw, 6rem) var(--gutter) clamp(2.5rem, 5vw, 4rem); }
 .stick__head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; }

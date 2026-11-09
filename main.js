@@ -66,6 +66,19 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
   setPaused(paused);
 })();
 
+// ---------- Design ideas gallery: pause button ----------
+(() => {
+  const section = document.querySelector(".design-ideas");
+  if (!section) return;
+  const btn = section.querySelector(".design-ideas__pause");
+  btn.addEventListener("click", () => {
+    const paused = !section.classList.contains("is-paused");
+    section.classList.toggle("is-paused", paused);
+    btn.setAttribute("aria-pressed", String(paused));
+    btn.setAttribute("aria-label", paused ? "Play the design ideas gallery" : "Pause the design ideas gallery");
+  });
+})();
+
 // ---------- How it works: step-by-step diagram ----------
 (() => {
   const diagram = document.getElementById("diagram");
