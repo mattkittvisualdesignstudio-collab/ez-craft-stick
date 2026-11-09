@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>EZ Craft Stick DIY guide</title><style>@font-face { font-family: "Figtree"; font-weight: 400; font-display: swap; src: url("assets/fonts/figtree-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-weight: 600; font-display: swap; src: url("assets/fonts/figtree-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Figtree"; font-weight: 800; font-display: swap; src: url("assets/fonts/figtree-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Young Serif"; font-weight: 400; font-display: swap; src: url("assets/fonts/young-serif-latin-400-normal.woff2") format("woff2"); }
+@page { size: 11in 8.5in; margin: 0; }
+:root {
+  --ink: #2a1530; --soft: #5d4a62; --velvet: #4a1832; --ribbon: #7a2347; --tulle: #f4eff5;
+  --stick: #1d1d21; --edge: #3c3c43; --orange: #ee8a2b; --orange-deep: #c86a12; --champagne: #d2b072;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font: 400 10pt/1.45 "Figtree", sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.sheet { width: 11in; height: 8.5in; display: grid; grid-template-columns: 1fr 1fr; page-break-after: always; break-after: page; overflow: hidden; }
+.sheet:last-child { page-break-after: auto; break-after: auto; }
+.panel { position: relative; height: 8.5in; padding: .5in .5in .75in; display: flex; flex-direction: column; overflow: hidden; }
+h1, h2 { font-family: "Young Serif", Georgia, serif; font-weight: 400; margin: 0; line-height: 1.1; }
+h2 { font-size: 24pt; margin-bottom: .14in; }
+h3 { font-size: 11.5pt; font-weight: 800; margin: 0 0 .04in; }
+p { margin: 0 0 .08in; }
+
+/* wordmark */
+.wm { display: inline-flex; align-items: center; gap: .06in; font-weight: 800; }
+.wm b { background: var(--orange); color: var(--ink); border-radius: 6px 6px 6px 1px; padding: .04in .06in .03in; }
+.wm--lg { font-size: 15pt; color: #fff; }
+.wm--sm { font-size: 7.5pt; }
+.wm--sm b { border-radius: 4px 4px 4px 1px; padding: .02in .04in; }
+
+.range { color: var(--orange-deep); font-weight: 800; font-size: 9pt; margin-bottom: .06in; }
+.lead { font-size: 10.5pt; color: var(--soft); margin-bottom: .2in; }
+.pf { position: absolute; left: .5in; right: .5in; bottom: .35in; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #e4dbe6; padding-top: .08in; font-size: 8pt; font-weight: 800; color: var(--soft); }
+
+/* numbered steps */
+.quick { margin: 0 0 .18in; padding-left: .22in; font-size: 10.5pt; }
+.quick li { margin-bottom: .05in; }
+.quick li::marker { color: var(--orange-deep); font-weight: 800; }
+.step { display: grid; grid-template-columns: .38in 1fr; gap: .08in; margin-bottom: .14in; }
+.num { width: .32in; height: .32in; border-radius: 50%; background: var(--orange); display: grid; place-items: center; font-weight: 800; font-size: 11pt; }
+.step p { color: var(--soft); margin: 0; }
+
+/* photos + mini diagrams */
+.photo { width: 100%; object-fit: cover; border-radius: 8px; display: block; }
+.media { display: grid; grid-template-columns: 1.55fr 1fr; gap: .18in; align-items: end; margin-top: auto; margin-bottom: .2in; }
+.media .photo { aspect-ratio: 1; }
+.media--big { grid-template-columns: 1.7fr 1fr; }
+.photo--wide { aspect-ratio: 4 / 3; margin-bottom: .18in; }
+.mini { background: var(--tulle); border-radius: 10px; padding: .1in; text-align: center; font-size: 7.5pt; color: var(--soft); font-weight: 600; }
+.mini span { display: block; margin-top: .04in; line-height: 1.25; }
+.mini--tall { align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+.dg { width: 100%; height: auto; display: block; }
+.dg--mini { max-height: 3in; }
+.split { display: grid; grid-template-columns: 1.6fr 1fr; gap: .2in; flex: 1; margin-bottom: .2in; }
+
+/* A B C substeps */
+.subs { list-style: none; margin: 0; padding: 0; display: grid; gap: .12in; align-content: start; }
+.subs li { display: grid; grid-template-columns: 1.15in .26in 1fr; gap: .08in; align-items: center; }
+.subs img { width: 1.15in; height: 1.15in; object-fit: cover; border-radius: 6px; }
+.sub-l { width: .24in; height: .24in; border-radius: 50%; background: var(--ribbon); color: #fff; font-weight: 800; font-size: 8pt; display: grid; place-items: center; }
+.subs p { margin: 0; font-size: 9.5pt; }
+.panel:not(:has(.split)) .subs { margin-bottom: .2in; }
+.panel:not(:has(.split)) .subs li { grid-template-columns: 1.45in .26in 1fr; }
+.panel:not(:has(.split)) .subs img { width: 1.45in; height: 1.45in; }
+.done { margin-top: auto; margin-bottom: .2in; background: var(--tulle); border-left: 5px solid var(--orange); padding: .1in .14in; border-radius: 6px; font-weight: 600; }
+
+/* diagram parts (static, no motion in print) */
+.st-body { fill: var(--stick); }
+.st-rail { fill: none; stroke: var(--edge); stroke-width: 2; }
+.tab { fill: #2a2a30; stroke: #6d6d76; stroke-width: 1.5; }
+.rb { fill: none; stroke: var(--ribbon); stroke-linecap: round; stroke-linejoin: round; }
+.rb-spine { stroke-width: 44; stroke-linecap: butt; }
+.rb-loop { stroke-width: 34; }
+.rb-hang { stroke-width: 12; }
+.rb-bow { stroke-width: 18; }
+.tulle { fill: none; stroke: #fff; stroke-opacity: .9; stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 0 1px #b9a8bd); }
+.orn { stroke: rgba(42,21,48,.25); stroke-width: 1.5; }
+.orn-gold { fill: var(--champagne); } .orn-pearl { fill: #fbf8f2; } .orn-silver { fill: #c9ccd3; }
+.dg [data-step] { display: none; }
+.dg[data-step="2"] [data-step="2"],
+.dg[data-step="3"] :is([data-step="2"],[data-step="3"]),
+.dg[data-step="4"] :is([data-step="2"],[data-step="3"],[data-step="4"]),
+.dg[data-step="5"] :is([data-step="2"],[data-step="3"],[data-step="4"],[data-step="5"]),
+.dg[data-step="6"] [data-step] { display: inline; }
+.dg[data-step="1"] .tab { fill: var(--orange); stroke: var(--orange-deep); }
+.dg[data-step="2"] .tab[data-tab="1"] { fill: var(--orange); stroke: var(--orange-deep); }
+
+/* cover */
+.cover { background: var(--velvet); color: #fff; padding: .55in .5in .5in; }
+.cover__top { display: flex; justify-content: space-between; align-items: center; }
+.cover__kicker { margin: 0; font-weight: 600; font-size: 9.5pt; color: #eadfe9; }
+.cover h1 { font-size: 27pt; margin: .3in 0 .15in; max-width: 4.2in; }
+.cover__art { flex: 1; min-height: 0; display: flex; justify-content: center; align-items: center; background: var(--tulle); border-radius: 14px; padding: .2in; }
+.dg--cover { height: 100%; width: auto; max-height: 4.1in; }
+.cover__sub { margin: .16in 0 0; color: #eadfe9; font-size: 10pt; }
+
+/* back panel */
+.back { background: #fff; }
+.eyebrowless { color: var(--orange-deep); font-weight: 800; font-size: 9pt; margin-bottom: .06in; }
+.checks { list-style: none; margin: 0 0 .14in; padding: 0; display: grid; gap: .045in; font-size: 9.5pt; }
+.checks li { display: grid; grid-template-columns: .2in 1fr; }
+.checks li::before { content: ""; width: .12in; height: .12in; border: 1.5px solid var(--ink); border-radius: 3px; margin-top: .03in; }
+.choose { background: var(--tulle); border-radius: 10px; padding: .12in .16in; font-size: 9.5pt; margin-bottom: .1in; }
+.choose h3 { color: var(--orange-deep); font-size: 10pt; }
+.choose p { margin: 0 0 .04in; }
+.back__stick { width: 100%; margin: .02in 0 .08in; }
+.caution { display: grid; grid-template-columns: .3in 1fr; gap: .08in; border: 1.5px solid #b3261e; border-left-width: 5px; border-radius: 8px; padding: .08in .12in; background: #fdecea; color: #5c0f0a; font-size: 8.5pt; margin-bottom: .1in; }
+.caution svg { width: .28in; height: .28in; }
+.caution p { margin: 0; }
+.caution strong { color: #b3261e; }
+.more { font-size: 9pt; }
+.more p { margin: 0; }
+.placeholder { display: inline-block; margin-top: .03in !important; border: 1.5px dashed #b9a8bd; border-radius: 6px; padding: .03in .1in; color: var(--soft); }
+.print-note { margin-top: auto; font-size: 7pt; color: var(--soft); }
+
+/* fill the space on photo-led pages */
+.media { margin-top: .05in; flex: 1; min-height: 0; align-items: stretch; }
+.media .photo { aspect-ratio: auto; height: 100%; }
+.media .mini { display: flex; flex-direction: column; justify-content: center; }
+
+@media screen {
+  html { background: #ece5ee; }
+  body { padding: 0 0 3rem; }
+  .bar { position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; gap: .75rem; flex-wrap: wrap; padding: .6rem 1rem; background: #fff; box-shadow: 0 1px 0 #ddd0df; font-size: 15px; }
+  .bar a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem; border-radius: 999px; font-weight: 800; text-decoration: none; color: var(--ink); border: 2px solid var(--ink); }
+  .bar a.dl { background: var(--orange); border-color: var(--orange); }
+  .bar a:focus-visible { outline: 3px solid #2b86c5; outline-offset: 2px; }
+  .pages { display: flex; flex-direction: column; align-items: center; gap: 24px; padding-top: 24px; }
+  .page { width: 5.5in; height: 8.5in; background: #fff; box-shadow: 0 10px 30px -14px rgba(42,21,48,.45); border-radius: 6px; overflow: hidden; }
+  .page .panel { height: 8.5in; }
+}
+</style></head><body><header class="bar"><a href="index.html#guide">Back to EZ Craft Stick</a><a class="dl" href="assets/ez-craft-stick-diy-guide.pdf">Download the PDF</a></header><main class="pages"><div class="page" aria-label="Page 1">
+<section class="panel cover">
+  <div class="cover__top">
+    <span class="wm wm--lg"><b>EZ</b>Craft Stick</span>
+    <p class="cover__kicker">DIY project guide</p>
+  </div>
+  <h1>Make a ribbon door hanger or table centerpiece</h1>
+  <div class="cover__art"><svg class="dg dg--cover" data-step="6" aria-hidden="true" viewBox="0 12 400 856">
+<defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2a1530" flood-opacity=".25"/></filter></defs>
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" data-step="2" pathLength="1" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" data-step="2" pathLength="1" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" data-step="3" pathLength="1" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" data-step="3" pathLength="1" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" data-step="5" pathLength="1" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" data-tab="1" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="2" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="3" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="4" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="5" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="6" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="7" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" data-step="6" pathLength="1" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow" data-step="6"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+</div>
+  <p class="cover__sub">Ribbon loops, airy tulle and the accents you choose. One stick, about ten steps.</p>
+</section></div><div class="page" aria-label="Page 2">
+<section class="panel">
+  <p class="range">Steps 1 to 4</p>
+  <h2>Start your project</h2>
+  <ol class="quick" start="1">
+    <li>Gather the supplies on the back panel.</li>
+    <li>Heat the glue gun and keep a glue stick handy.</li>
+    <li>Lay the EZ Craft Stick flat on your work surface, short tabs on the right.</li>
+  </ol>
+  <div class="step"><span class="num">4</span><div><h3>Make the hanging loop</h3><p>Door or wall hanging only. Make a 2-inch loop from the wide ribbon and hot glue it to the top of the stick. Making a centerpiece? Skip to step 5.</p></div></div>
+  <div class="media">
+    <img class="photo" src="assets/guide/s4-hanging-loop.jpg" alt="">
+    <div class="mini"><svg class="dg dg--mini" data-step="1" aria-hidden="true" viewBox="0 12 400 856">
+<defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2a1530" flood-opacity=".25"/></filter></defs>
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" data-step="2" pathLength="1" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" data-step="2" pathLength="1" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" data-step="3" pathLength="1" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" data-step="3" pathLength="1" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" data-step="5" pathLength="1" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" data-tab="1" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="2" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="3" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="4" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="5" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="6" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="7" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" data-step="6" pathLength="1" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow" data-step="6"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span>Your stick: 4 short tabs, 3 tall tabs</span></div>
+  </div>
+  <footer class="pf"><span class="wm wm--sm"><b>EZ</b>Craft Stick</span><span>2</span></footer>
+</section></div><div class="page" aria-label="Page 3">
+<section class="panel">
+  <p class="range">Step 5</p>
+  <h2>Form the first loop</h2>
+  <p class="lead">Pull the wide ribbon about 4 inches back over your fingers, then bring it forward again to make a loop. Make it longer or shorter for the look you want.</p>
+  <div class="media media--big">
+    <img class="photo" src="assets/guide/s5-first-loop.jpg" alt="">
+    <div class="mini"><svg class="dg dg--mini" data-step="2" aria-hidden="true" viewBox="0 12 400 856">
+<defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2a1530" flood-opacity=".25"/></filter></defs>
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" data-step="2" pathLength="1" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" data-step="2" pathLength="1" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" data-step="3" pathLength="1" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" data-step="3" pathLength="1" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" data-step="5" pathLength="1" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" data-tab="1" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="2" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="3" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="4" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="5" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="6" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="7" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" data-step="6" pathLength="1" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow" data-step="6"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span>First loop at the top tab</span></div>
+  </div>
+  <footer class="pf"><span class="wm wm--sm"><b>EZ</b>Craft Stick</span><span>3</span></footer>
+</section></div><div class="page" aria-label="Page 4">
+<section class="panel">
+  <p class="range">Step 6</p>
+  <h2>Tuck and secure</h2>
+  <p class="lead">Tuck both ribbon edges under the top tab and angle the loop slightly to one side. Fold the edges back, run a line of hot glue underneath, then fold the ribbon back into place and hold it while the glue cools.</p>
+  <ol class="subs"><li><img src="assets/guide/s6a.jpg" alt=""><span class="sub-l">A</span><p>Tuck both edges under the top tab.</p></li><li><img src="assets/guide/s6b.jpg" alt=""><span class="sub-l">B</span><p>Angle the loop and fold back the ribbon edges.</p></li><li><img src="assets/guide/s6c.jpg" alt=""><span class="sub-l">C</span><p>Fold the ribbon back into place and hold it as the glue cools.</p></li></ol>
+  <footer class="pf"><span class="wm wm--sm"><b>EZ</b>Craft Stick</span><span>4</span></footer>
+</section></div><div class="page" aria-label="Page 5">
+<section class="panel">
+  <p class="range">Step 7</p>
+  <h2>Alternate and trim</h2>
+  <p class="lead">Repeat at each remaining tab, switching sides every time. Hot glue the ribbon at the bottom of the stick. For a door hanging, trim flush or leave a tail for the bow. For a centerpiece, trim flush with the end.</p>
+  <div class="split">
+    <ol class="subs"><li><img src="assets/guide/s7a.jpg" alt=""><span class="sub-l">A</span><p>Make the next loop on the opposite side.</p></li><li><img src="assets/guide/s7b.jpg" alt=""><span class="sub-l">B</span><p>Hot glue the ribbon at the bottom.</p></li><li><img src="assets/guide/s7c.jpg" alt=""><span class="sub-l">C</span><p>Trim the ribbon to suit your project.</p></li></ol>
+    <div class="mini mini--tall"><svg class="dg dg--mini" data-step="4" aria-hidden="true" viewBox="0 12 400 856">
+<defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2a1530" flood-opacity=".25"/></filter></defs>
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" data-step="2" pathLength="1" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" data-step="2" pathLength="1" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" data-step="3" pathLength="1" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" data-step="3" pathLength="1" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" data-step="5" pathLength="1" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" data-tab="1" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="2" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="3" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="4" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="5" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="6" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="7" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" data-step="6" pathLength="1" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow" data-step="6"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span>One loop per tab, alternating</span></div>
+  </div>
+  <footer class="pf"><span class="wm wm--sm"><b>EZ</b>Craft Stick</span><span>5</span></footer>
+</section></div><div class="page" aria-label="Page 6">
+<section class="panel">
+  <p class="range">Step 8</p>
+  <h2>Weave in the tulle</h2>
+  <p class="lead">Glue one end of the tulle to the bottom of the stick. Weave it back and forth between the ribbon loops. Even out both sides, tack the center of the tulle to the tabs between loops, then fluff it.</p>
+  <div class="split">
+    <ol class="subs"><li><img src="assets/guide/s8a.jpg" alt=""><span class="sub-l">A</span><p>Anchor the tulle at the bottom.</p></li><li><img src="assets/guide/s8b.jpg" alt=""><span class="sub-l">B</span><p>Weave the tulle between the ribbon loops.</p></li><li><img src="assets/guide/s8c.jpg" alt=""><span class="sub-l">C</span><p>Even out both sides and fluff the tulle.</p></li></ol>
+    <div class="mini mini--tall"><svg class="dg dg--mini" data-step="5" aria-hidden="true" viewBox="0 12 400 856">
+<defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2a1530" flood-opacity=".25"/></filter></defs>
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" data-step="2" pathLength="1" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" data-step="2" pathLength="1" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" data-step="3" pathLength="1" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" data-step="3" pathLength="1" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" data-step="5" pathLength="1" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" data-tab="1" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="2" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="3" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="4" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="5" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="6" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="7" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" data-step="6" pathLength="1" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow" data-step="6"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span>Tulle weaves between loops</span></div>
+  </div>
+  <footer class="pf"><span class="wm wm--sm"><b>EZ</b>Craft Stick</span><span>6</span></footer>
+</section></div><div class="page" aria-label="Page 7">
+<section class="panel">
+  <p class="range">Steps 9 and 10</p>
+  <h2>Decorate and finish</h2>
+  <div class="step"><span class="num">9</span><div><h3>Arrange and attach accents</h3><p>Lay out the flowers, stems or ornaments first. When you like the arrangement, hot glue them in place.</p></div></div>
+  <img class="photo photo--wide" src="assets/guide/s9-accents.jpg" alt="">
+  <div class="step"><span class="num">10</span><div><h3>Finish your project</h3><p>Door hanging: glue the bow to the bottom and hang it by the loop. Centerpiece: lay the finished piece on the table.</p></div></div>
+  <p class="done">Share what you made. We'd love to see it.</p>
+  <footer class="pf"><span class="wm wm--sm"><b>EZ</b>Craft Stick</span><span>7</span></footer>
+</section></div><div class="page" aria-label="Page 8">
+<section class="panel back">
+  <p class="eyebrowless">Before you start</p>
+  <h2>Gather your supplies</h2>
+  <ul class="checks">
+    <li>1 EZ Craft Stick</li>
+    <li>2½ yards of wired, double-sided ribbon, 2 to 3 inches wide</li>
+    <li>1½ yards of tulle, 6 inches wide</li>
+    <li>Hot glue gun with 2 or 3 glue sticks</li>
+    <li>Scissors</li>
+    <li>7 to 12 flowers, stems or ornaments</li>
+    <li>For a door hanger: a 4 to 8 inch bow, or 1½ yards of ribbon to make your own</li>
+  </ul>
+  <div class="choose">
+    <h3>Choose your project</h3>
+    <p><strong>Door or wall hanging.</strong> Add a hanging loop at the top and a bow at the bottom.</p>
+    <p><strong>Table centerpiece.</strong> Trim the ribbon flush at both ends. Lay two end to end for a runner.</p>
+  </div>
+  <img class="back__stick" src="assets/guide/stick-black-3d.png" alt="">
+  <div class="caution">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 1.5 21h21z" fill="#b3261e"/><rect x="11" y="9" width="2" height="6.5" rx="1" fill="#fff"/><circle cx="12" cy="18" r="1.25" fill="#fff"/></svg>
+    <p><strong>Craft use only.</strong> Never use this stick to install or secure a child car seat or seat belt. Hot glue and the glue gun tip get very hot, so kids should craft with an adult.</p>
+  </div>
+  <div class="more">
+    <p><strong>More ideas and videos</strong></p>
+    <p class="placeholder">Website and Instagram go here</p>
+  </div>
+  <p class="print-note">Printing: double-sided on two US Letter sheets, landscape, flip on the short edge. Nest the second sheet inside the first and fold.</p>
+</section></div></main>
+<script>
+// scale each 5.5 x 8.5 in page to fit narrow screens
+function fit(){ const w = Math.min(1, (window.innerWidth - 32) / 528); document.querySelectorAll('.page').forEach(p => p.style.zoom = w); }
+addEventListener('resize', fit); fit();
+</script></body></html>

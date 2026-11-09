@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EZ Craft Stick</title>
+  <meta name="description" content="A 14-inch black stick with seven tabs that turns a spool of ribbon into a door hanger or table centerpiece. See how it works, get the free DIY guide, and sign up for launch updates.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="site-header__inner">
+      <a class="wordmark" href="#top" aria-label="EZ Craft Stick home">
+        <span class="wordmark__ez">EZ</span><span class="wordmark__name">Craft Stick</span>
+      </a>
+      <button type="button" class="menu-btn" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-open" d="M4 7h16M4 12h16M4 17h16"/><path class="i-close" d="M6 6l12 12M18 6 6 18"/></svg>
+        <span>Menu</span>
+      </button>
+      <nav aria-label="Main" id="main-nav">
+        <ul class="nav">
+          <li><a href="#stick">The stick</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#pieces">Pieces</a></li>
+          <li><a href="#ideas">Ideas</a></li>
+          <li><a href="#guide">Free guide</a></li>
+          <li><button type="button" class="nav__cta" data-open-order>Order on Etsy</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: full-screen rotating scenes with a white fade behind the text -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__stage carousel" id="hero-carousel" role="region" aria-roledescription="carousel" aria-label="Styled scenes">
+        <div class="carousel__track">
+          <figure class="carousel__slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+            <img src="assets/img/hero-plum-centerpiece.jpg" alt="Plum velvet centerpiece with green taper candles on a holiday dinner table" width="1672" height="941">
+            <figcaption>Plum velvet centerpiece</figcaption>
+          </figure>
+          <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+            <img src="assets/img/hero-candy-cane-double-door.jpg" alt="Two white and red ribbon door hangers on a pair of white front doors decorated for Christmas" width="1672" height="941" loading="lazy">
+            <figcaption>Candy cane door hangers, one per door</figcaption>
+          </figure>
+          <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+            <img src="assets/img/hero-snowflake-doorway.jpg" alt="White and silver ribbon door hanger with snowflakes on a dark front door with lanterns" width="1672" height="941" loading="lazy">
+            <figcaption>Snowflake door hanger</figcaption>
+          </figure>
+          <figure class="carousel__slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+            <img src="assets/img/hero-icy-winter-table.jpg" alt="White and silver ribbon table runner with snowflakes and candles on a long dining table" width="1672" height="941" loading="lazy">
+            <figcaption>Icy winter table runner</figcaption>
+          </figure>
+        </div>
+        <div class="hero__fade" aria-hidden="true"></div>
+        <div class="hero__text">
+          <h1 id="hero-title">Turn a spool of ribbon into holiday decor.</h1>
+          <p>The EZ Craft Stick holds every ribbon loop in place while you glue, so a door hanger or table centerpiece comes out full and even, even if you've never made one.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#how">See how it works</a>
+            <a class="btn btn--quiet" href="#guide">Get the free guide</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__bar">
+        <p class="carousel__note">Real pieces. Scenes styled with AI.</p>
+        <div class="carousel__controls">
+          <button type="button" class="carousel__btn" data-carousel="pause" aria-controls="hero-carousel" aria-label="Pause slideshow">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><rect class="i-pause" x="5" y="4" width="3.5" height="12" rx="1"/><rect class="i-pause" x="11.5" y="4" width="3.5" height="12" rx="1"/><path class="i-play" d="M6 4l10 6-10 6z"/></svg>
+          </button>
+          <button type="button" class="carousel__btn" data-carousel="prev" aria-controls="hero-carousel" aria-label="Previous scene">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12.5 4L6.5 10l6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="carousel__dots" aria-hidden="true"><i class="is-active"></i><i></i><i></i><i></i></span>
+          <button type="button" class="carousel__btn" data-carousel="next" aria-controls="hero-carousel" aria-label="Next scene">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7.5 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM REELS: hidden until the videos and Instagram account exist. Remove "hidden" to show. -->
+    <section class="reels" aria-labelledby="reels-title" hidden>
+      <div class="reels__head">
+        <h2 id="reels-title">Watch one come together</h2>
+        <p>Short videos of the stick in action, from first loop to finished bow.</p>
+      </div>
+      <!-- TODO: replace these tiles with the Instagram embed or a feed widget once the account has reels -->
+      <ul class="reels__row" role="list">
+        <li class="reel">
+          <img src="assets/img/emerald-bells-door-hanger.jpg" alt="" width="952" height="1269" loading="lazy">
+          <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          <span class="reel__caption">Emerald bells, start to finish</span>
+        </li>
+        <li class="reel">
+          <img src="assets/img/candy-cane-door-hanger.jpg" alt="" width="952" height="1269" loading="lazy">
+          <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          <span class="reel__caption">How to tuck a loop under a tab</span>
+        </li>
+        <li class="reel">
+          <img src="assets/img/plum-velvet-table-runner.jpg" alt="" width="952" height="1269" loading="lazy">
+          <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          <span class="reel__caption">Two sticks, one table runner</span>
+        </li>
+        <li class="reel">
+          <img src="assets/img/burgundy-gold-door-hanger.jpg" alt="" width="952" height="1269" loading="lazy">
+          <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          <span class="reel__caption">Weaving in the tulle</span>
+        </li>
+        <li class="reel">
+          <img src="assets/img/plum-velvet-taper-centerpiece.jpg" alt="" width="952" height="1269" loading="lazy">
+          <span class="reel__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z"/></svg></span>
+          <span class="reel__caption">A taper candle centerpiece</span>
+        </li>
+      </ul>
+      <p class="reels__soon">Reels coming soon. These tiles show where the videos will play.</p>
+    </section>
+
+    <!-- THE STICK -->
+    <section class="stick" id="stick" aria-labelledby="stick-title">
+      <div class="stick__head">
+        <h2 id="stick-title">This is the stick</h2>
+        <p>A shallow black channel with seven tabs. The tabs lift just enough to slide ribbon underneath, then grip it while the glue sets.</p>
+      </div>
+      <figure class="stick__figure">
+        <img src="assets/img/stick-black-3d.png" alt="The EZ Craft Stick: a long black plastic channel with tabs along both edges" width="1600" height="391">
+      </figure>
+      <dl class="specs">
+        <div><dt>Length</dt><dd>14 in</dd></div>
+        <div><dt>Width</dt><dd>2.4 in</dd></div>
+        <div><dt>Tabs</dt><dd>7, alternating sides</dd></div>
+        <div><dt>Material</dt><dd>Black plastic, reusable</dd></div>
+      </dl>
+    </section>
+
+    <!-- HOW IT WORKS: interactive, a real sequence -->
+    <section class="how" id="how" aria-labelledby="how-title">
+      <div class="how__inner">
+        <div class="how__head">
+          <h2 id="how-title">How it works</h2>
+          <p class="how__lede">Six steps. Tap a step to see it on the stick.</p>
+        </div>
+        <div class="how__copy">
+
+          <ol class="stepper" id="stepper">
+            <li>
+              <button type="button" aria-controls="diagram" data-go="1">
+                <span class="stepper__title">Lay the stick flat</span>
+                <span class="stepper__body">Short tabs run down one side and tall tabs down the other. Each tab holds one fold of ribbon.</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" aria-controls="diagram" data-go="2">
+                <span class="stepper__title">Make a loop and tuck it</span>
+                <span class="stepper__body">Pull the ribbon about 4 inches back over your fingers to form a loop. Tuck both edges under the top tab and glue.</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" aria-controls="diagram" data-go="3">
+                <span class="stepper__title">Switch sides</span>
+                <span class="stepper__body">Make the next loop on the opposite side and tuck it under the next tab.</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" aria-controls="diagram" data-go="4">
+                <span class="stepper__title">Repeat to the end</span>
+                <span class="stepper__body">Keep alternating, one loop per tab. Glue the ribbon at the bottom and trim.</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" aria-controls="diagram" data-go="5">
+                <span class="stepper__title">Weave in the tulle</span>
+                <span class="stepper__body">Glue the tulle at the bottom, weave it back and forth between the loops, then fluff it.</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" aria-controls="diagram" data-go="6">
+                <span class="stepper__title">Add accents and a bow</span>
+                <span class="stepper__body">Glue in ornaments, berries or stems. For a door hanger, add a hanging loop at the top and a bow at the bottom.</span>
+              </button>
+            </li>
+          </ol>
+
+          <div class="step-detail" aria-hidden="true">
+            <p class="step-detail__count">Step <span data-detail="n">1</span> of 6</p>
+            <h3 data-detail="title">Lay the stick flat</h3>
+            <p data-detail="body">Short tabs run down one side and tall tabs down the other. Each tab holds one fold of ribbon.</p>
+          </div>
+
+          <div class="stepper__nav">
+            <button type="button" class="btn btn--quiet btn--small" id="prev">Back</button>
+            <button type="button" class="btn btn--primary btn--small" id="next">Next step</button>
+          </div>
+        </div>
+
+        <figure class="how__diagram" id="diagram" data-step="1">
+          <div class="how__card">
+          <svg class="steps-svg" role="img" aria-labelledby="diagram-status" viewBox="0 12 400 856">
+<defs><filter id="soft" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2a1530" flood-opacity=".25"/></filter></defs>
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" data-step="2" pathLength="1" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" data-step="2" pathLength="1" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" data-step="3" pathLength="1" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" data-step="3" pathLength="1" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" data-step="4" pathLength="1" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" data-step="4" pathLength="1" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" data-step="5" pathLength="1" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" data-tab="1" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="2" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="3" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="4" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="5" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" data-tab="6" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" data-tab="7" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" data-step="6" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" data-step="6" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" data-step="6" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" data-step="6" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" data-step="6" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" data-step="6" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" data-step="6" pathLength="1" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow" data-step="6"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+
+          </div>
+          <figcaption class="sr-only" aria-live="polite" id="diagram-status">Step 1 of 6: Lay the stick flat</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PIECES: real photos only, one photo per piece -->
+    <section class="pieces" id="pieces" aria-labelledby="pieces-title">
+      <div class="pieces__head">
+        <h2 id="pieces-title">Pieces made with the stick</h2>
+        <p>Our family made every piece here. Door hangers and centerpieces use one stick; the runner uses two with a candle between them.</p>
+      </div>
+      <div class="mosaic">
+        <figure class="tile tile--tall">
+          <img src="assets/img/emerald-bells-door-hanger.jpg" alt="Emerald satin ribbon loops with gold tulle, green bells and gold picks on a white door" loading="lazy">
+          <figcaption><strong>Emerald and gold bells</strong><span>Door hanger</span></figcaption>
+        </figure>
+        <figure class="tile tile--wide">
+          <img src="assets/img/champagne-burlap-swag.jpg" alt="Burlap ribbon loops with champagne tulle, gold berries, white sprigs and a gold ornament on a dark table" loading="lazy">
+          <figcaption><strong>Champagne burlap</strong><span>Mantel or table swag</span></figcaption>
+        </figure>
+        <figure class="tile tile--tall">
+          <img src="assets/img/champagne-poinsettia-door-swag.jpg" alt="Burlap and champagne ribbon with metallic poinsettias and gold foliage on a white door" loading="lazy">
+          <figcaption><strong>Champagne poinsettia</strong><span>Door swag</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/candy-cane-door-hanger.jpg" alt="White ribbon loops with red ornaments, pearl sprigs and a red mesh bow on a white door" loading="lazy">
+          <figcaption><strong>Candy cane</strong><span>Door hanger</span></figcaption>
+        </figure>
+        <figure class="tile tile--tall">
+          <img src="assets/img/plum-velvet-table-runner.jpg" alt="Plum velvet ribbon loops with silver and champagne ornaments around a white candle on a table" loading="lazy">
+          <figcaption><strong>Plum velvet runner</strong><span>Two sticks and a candle</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/burgundy-gold-door-hanger.jpg" alt="Gold ribbon loops with greenery, pinecones and burgundy ornaments on a white door" loading="lazy">
+          <figcaption><strong>Burgundy and gold</strong><span>Door hanger</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/woodland-berry-door-hanger.jpg" alt="White ribbon with pinecones, red berries and a red velvet bow on a white door" loading="lazy">
+          <figcaption><strong>Woodland berry</strong><span>Door hanger</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/plum-velvet-taper-centerpiece.jpg" alt="Plum velvet ribbon with evergreen sprigs around two green taper candles" loading="lazy">
+          <figcaption><strong>Plum velvet tapers</strong><span>Centerpiece</span></figcaption>
+        </figure>
+        <figure class="tile tile--tall">
+          <img src="assets/img/gothic-plaid-door-hanger.jpg" alt="Black and white plaid ribbon with a skull, black ornaments and lime accents on a white door" loading="lazy">
+          <figcaption><strong>Gothic plaid</strong><span>Halloween door hanger</span></figcaption>
+        </figure>
+        <figure class="tile tile--wide">
+          <img src="assets/img/white-gold-table-swag.jpg" alt="White satin ribbon loops with gold glitter balls and tulle on a wood table" loading="lazy">
+          <figcaption><strong>White and gold</strong><span>Table swag</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/red-plaid-table-swag.jpg" alt="Red plaid ribbon loops with red ornaments and pearl strands on a wood table" loading="lazy">
+          <figcaption><strong>Red plaid</strong><span>Table swag</span></figcaption>
+        </figure>
+        <figure class="tile">
+          <img src="assets/img/snowflake-table-swag.jpg" alt="White ribbon loops with ice-blue snowflakes and tulle on a wood table" loading="lazy">
+          <figcaption><strong>Snowflake</strong><span>Table swag</span></figcaption>
+        </figure>
+        <figure class="tile tile--wide">
+          <img src="assets/img/halloween-skull-centerpiece.jpg" alt="Gray tulle and ribbon with skulls and purple and orange ornaments on a round table" loading="lazy">
+          <figcaption><strong>Skulls and tulle</strong><span>Halloween centerpiece</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- IDEAS: illustrated placeholders until idea images are made -->
+    <section class="ideas" id="ideas" aria-labelledby="ideas-title">
+      <div class="ideas__head">
+        <h2 id="ideas-title">One stick, a look for every season</h2>
+        <p>Hang it on a door with a bow, or trim it flush and lay it on the table. Change the ribbon and the same stick works all year. These are ideas, not pieces for sale yet.</p>
+      </div>
+      <!-- TODO: swap each .idea__art illustration for an idea image (AI or real) once it exists -->
+      <ul class="ideas__grid" role="list">
+          <li class="idea" style="--rb:#c8102e;--tl:#f7c6d0;--o1:#ffffff;--bg:#fde8ee">
+            <div class="idea__art"><svg class="idea-svg" aria-hidden="true" focusable="false" viewBox="10 0 380 880" aria-hidden="true">
+
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span class="idea__badge">Idea</span></div>
+            <span class="swatch" style="--a:#c8102e;--b:#f7c6d0;--c:#ffffff" aria-hidden="true"></span>
+            <strong>Valentine's Day</strong><span>Red satin, blush tulle, hearts</span>
+          </li>
+          <li class="idea" style="--rb:#e98fb5;--tl:#fff1a8;--o1:#bfe3d0;--bg:#fbf4e4">
+            <div class="idea__art"><svg class="idea-svg" aria-hidden="true" focusable="false" viewBox="10 0 380 880" aria-hidden="true">
+
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span class="idea__badge">Idea</span></div>
+            <span class="swatch" style="--a:#e98fb5;--b:#fff1a8;--c:#bfe3d0" aria-hidden="true"></span>
+            <strong>Easter and spring</strong><span>Pastels, eggs, faux tulips</span>
+          </li>
+          <li class="idea" style="--rb:#b22234;--tl:#ffffff;--o1:#3c3b6e;--bg:#eef0f8">
+            <div class="idea__art"><svg class="idea-svg" aria-hidden="true" focusable="false" viewBox="10 0 380 880" aria-hidden="true">
+
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span class="idea__badge">Idea</span></div>
+            <span class="swatch" style="--a:#b22234;--b:#ffffff;--c:#3c3b6e" aria-hidden="true"></span>
+            <strong>Fourth of July</strong><span>Stars, stripes, burlap</span>
+          </li>
+          <li class="idea" style="--rb:#b5763a;--tl:#e9c46a;--o1:#7b3f1d;--bg:#f8eedf">
+            <div class="idea__art"><svg class="idea-svg" aria-hidden="true" focusable="false" viewBox="10 0 380 880" aria-hidden="true">
+
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span class="idea__badge">Idea</span></div>
+            <span class="swatch" style="--a:#b5763a;--b:#e9c46a;--c:#7b3f1d" aria-hidden="true"></span>
+            <strong>Fall harvest</strong><span>Burlap, sunflowers, wheat</span>
+          </li>
+          <li class="idea" style="--rb:#0b3d91;--tl:#ffd100;--o1:#ffffff;--bg:#eaf0fa">
+            <div class="idea__art"><svg class="idea-svg" aria-hidden="true" focusable="false" viewBox="10 0 380 880" aria-hidden="true">
+
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span class="idea__badge">Idea</span></div>
+            <span class="swatch" style="--a:#0b3d91;--b:#ffd100;--c:#ffffff" aria-hidden="true"></span>
+            <strong>Graduation and game day</strong><span>School or team colors</span>
+          </li>
+          <li class="idea" style="--rb:#e9dcc4;--tl:#ffffff;--o1:#d2b072;--bg:#f7f3ec">
+            <div class="idea__art"><svg class="idea-svg" aria-hidden="true" focusable="false" viewBox="10 0 380 880" aria-hidden="true">
+
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span class="idea__badge">Idea</span></div>
+            <span class="swatch" style="--a:#e9dcc4;--b:#ffffff;--c:#d2b072" aria-hidden="true"></span>
+            <strong>Weddings and showers</strong><span>Ivory, champagne, florals</span>
+          </li>
+          <li class="idea" style="--rb:#9fb7cf;--tl:#ffffff;--o1:#dfe8f2;--bg:#eef3f8">
+            <div class="idea__art"><svg class="idea-svg" aria-hidden="true" focusable="false" viewBox="10 0 380 880" aria-hidden="true">
+
+<g data-layer="stick"><rect class="st-body" x="138.0" y="70" width="124" height="710" rx="10"/>
+<rect class="st-rail" x="142.0" y="76" width="116" height="698" rx="7"/></g>
+<path class="rb rb-spine" d="M200 46 L200 153.8"/>
+<path class="rb rb-loop" d="M200 117.8 C245 61.8 350 63.8 350 133.8 C350 203.8 245 205.8 200 149.8"/>
+<path class="rb rb-spine" d="M200 149.8 L200 251.0"/>
+<path class="rb rb-loop" d="M200 215.0 C155 159.0 50 161.0 50 231.0 C50 301.0 155 303.0 200 247.0"/>
+<path class="rb rb-spine" d="M200 247.0 L200 347.8"/>
+<path class="rb rb-loop" d="M200 311.8 C245 255.8 350 257.8 350 327.8 C350 397.8 245 399.8 200 343.8"/>
+<path class="rb rb-spine" d="M200 343.8 L200 445.0"/>
+<path class="rb rb-loop" d="M200 409.0 C155 353.0 50 355.0 50 425.0 C50 495.0 155 497.0 200 441.0"/>
+<path class="rb rb-spine" d="M200 441.0 L200 542.2"/>
+<path class="rb rb-loop" d="M200 506.2 C245 450.2 350 452.2 350 522.2 C350 592.2 245 594.2 200 538.2"/>
+<path class="rb rb-spine" d="M200 538.2 L200 639.0"/>
+<path class="rb rb-loop" d="M200 603.0 C155 547.0 50 549.0 50 619.0 C50 689.0 155 691.0 200 635.0"/>
+<path class="rb rb-spine" d="M200 635.0 L200 736.2"/>
+<path class="rb rb-loop" d="M200 700.2 C245 644.2 350 646.2 350 716.2 C350 786.2 245 788.2 200 732.2"/>
+<path class="tulle" d="M200 60 Q120 132 130 182 Q280 229 270 279 Q120 326 130 376 Q280 423 270 473 Q120 520 130 570 Q280 617 270 667 Q120 714 130 764 L200 790"/>
+<rect class="tab" x="226.4" y="109.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="207.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="303.8" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="401.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="498.2" width="31.6" height="48.0" rx="6"/>
+<rect class="tab" x="142.0" y="595.0" width="61.0" height="48.0" rx="6"/>
+<rect class="tab" x="226.4" y="692.2" width="31.6" height="48.0" rx="6"/>
+<circle class="orn orn-gold" cx="312" cy="123.8" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="157.8" r="10"/>
+<circle class="orn orn-pearl" cx="88" cy="221.0" r="15"/>
+<circle class="orn orn-silver" cx="98" cy="255.0" r="10"/>
+<circle class="orn orn-silver" cx="312" cy="317.8" r="15"/>
+<circle class="orn orn-gold" cx="302" cy="351.8" r="10"/>
+<circle class="orn orn-gold" cx="88" cy="415.0" r="15"/>
+<circle class="orn orn-pearl" cx="98" cy="449.0" r="10"/>
+<circle class="orn orn-pearl" cx="312" cy="512.2" r="15"/>
+<circle class="orn orn-silver" cx="302" cy="546.2" r="10"/>
+<circle class="orn orn-silver" cx="88" cy="609.0" r="15"/>
+<circle class="orn orn-gold" cx="98" cy="643.0" r="10"/>
+<circle class="orn orn-gold" cx="312" cy="706.2" r="15"/>
+<circle class="orn orn-pearl" cx="302" cy="740.2" r="10"/>
+<path class="rb rb-hang" d="M186 74 C170 10 230 10 214 74"/>
+<g class="bow"><path class="rb rb-bow" d="M200 788 C110 728 90 828 200 788"/><path class="rb rb-bow" d="M200 788 C290 728 310 828 200 788"/><path class="rb rb-bow" d="M200 788 L160 858"/><path class="rb rb-bow" d="M200 788 L240 858"/><circle class="orn orn-gold" cx="200" cy="788" r="12"/></g>
+</svg>
+<span class="idea__badge">Idea</span></div>
+            <span class="swatch" style="--a:#9fb7cf;--b:#ffffff;--c:#dfe8f2" aria-hidden="true"></span>
+            <strong>Winter, all season</strong><span>Silver, ice blue, snowflakes</span>
+          </li>
+          <li class="idea idea--yours">
+            <div class="idea__art idea__art--yours"><span>Your idea here</span></div>
+            <span class="swatch swatch--empty" aria-hidden="true"></span>
+            <strong>What would you make?</strong><span><a href="#updates">Tell us</a> and we might make it next.</span>
+          </li>
+      </ul>
+    </section>
+
+    <!-- GUIDE -->
+    <section class="guide" id="guide" aria-labelledby="guide-title">
+      <img class="guide__cover" src="assets/img/guide-cover.jpg" alt="Cover of the EZ Craft Stick DIY project guide" width="568" height="898" loading="lazy">
+      <div class="guide__text">
+        <h2 id="guide-title">The DIY guide is free</h2>
+        <p>Ten illustrated steps for a wall hanging or a centerpiece, with the full supply list. It prints on two letter-size sheets and folds into a booklet.</p>
+        <div class="actions actions--tight">
+          <a class="btn btn--primary" href="guide.html">Read the guide</a>
+          <a class="btn btn--quiet" href="assets/ez-craft-stick-diy-guide.pdf">Download the PDF (1.5 MB)</a>
+        </div>
+        <p class="fine">To print the booklet, use the PDF: double-sided, landscape, flip on the short edge.</p>
+        <details class="supplies">
+          <summary>What you need</summary>
+          <ul>
+            <li>1 EZ Craft Stick</li>
+            <li>2½ yards of wired, double-sided ribbon, 2 to 3 inches wide</li>
+            <li>1½ yards of tulle, 6 inches wide</li>
+            <li>Hot glue gun and 2 or 3 glue sticks</li>
+            <li>Scissors</li>
+            <li>7 to 12 flowers, stems or ornaments</li>
+            <li>For a hanging piece, a 4 to 8 inch bow</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- ORDER: purchases happen on Etsy -->
+    <section class="buy" id="order" aria-labelledby="buy-title">
+      <div class="buy__inner">
+        <div class="buy__main">
+          <h2 id="buy-title">Order on Etsy</h2>
+          <p>Our shop is on Etsy, so checkout, payment and shipping all happen there. Pick what you want and we'll take you straight to that part of the shop.</p>
+          <button type="button" class="btn btn--primary btn--light" data-open-order>Choose what to order</button>
+        </div>
+        <div class="buy__updates" id="updates">
+          <h3>Not ready to order?</h3>
+          <p>Get an email when we add new colors, kits and ideas.</p>
+          <form class="updates__form" id="signup" novalidate>
+            <label class="sr-only" for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email" required aria-describedby="email-error">
+            <button class="btn btn--primary" type="submit">Get updates</button>
+            <p class="field__error" id="email-error" hidden>Enter an email address like name@example.com.</p>
+            <p class="form__done" role="status" hidden>You're signed up. We'll email you when there's something new.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGIN -->
+    <section class="section origin" aria-labelledby="origin-title">
+      <div class="origin__text">
+        <h2 id="origin-title">It started as a car seat tool</h2>
+        <p>The stick was first sold as EZ-CarSeat®, a tool that guides a seat belt through the back of a child's car seat. The same tabs that hold a seat belt in place turned out to hold a loop of ribbon just as well.</p>
+        <p>So we gave it a second job. Same stick, new purpose.</p>
+        <div class="warning" role="note" aria-labelledby="warning-title">
+          <svg class="warning__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 1.5 21h21z" fill="currentColor"/><rect x="11" y="9" width="2" height="6.5" rx="1" fill="#fff"/><circle cx="12" cy="18" r="1.25" fill="#fff"/></svg>
+          <div>
+            <h3 id="warning-title">Do not use this to install a car seat</h3>
+            <p>The EZ Craft Stick is sold only as a craft tool. It has not been tested or certified for child passenger safety, and we are not selling it for that purpose. Never use it to install, adjust or secure a child car seat or seat belt. Follow your car seat and vehicle manufacturer's instructions, or ask a certified child passenger safety technician for help.</p>
+          </div>
+        </div>
+      </div>
+      <figure class="origin__img">
+        <img src="assets/img/ez-carseat-original-ad.jpg" alt="Original EZ-CarSeat ad showing a woman holding the black stick next to a child car seat" width="1024" height="768" loading="lazy">
+        <figcaption>The original EZ-CarSeat® ad.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span class="wordmark wordmark--small"><span class="wordmark__ez">EZ</span><span class="wordmark__name">Craft Stick</span></span>
+    <p>Made by our family for yours. EZ-CarSeat is a registered trademark. Images marked "styled with AI" are AI-made scenes based on real pieces.</p>
+    <p>&copy; 2026 EZ Craft Stick</p>
+  </footer>
+
+  <!-- ORDER DIALOG: each choice opens the matching section of the Etsy shop -->
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <form method="dialog" class="order-dialog__close-form">
+      <button class="order-dialog__close" aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </form>
+    <h2 id="order-dialog-title">What would you like to order?</h2>
+    <p class="order-dialog__lede">You'll finish your purchase on our Etsy shop. It opens in a new tab, and checkout, payment and shipping are handled there.</p>
+    <ul class="choices" role="list">
+      <li><a class="choice" data-etsy="stick" href="#" target="_blank" rel="noopener">
+        <img src="assets/img/stick-black-3d.png" alt="">
+        <span><strong>EZ Craft Stick</strong><span>The stick and the printed DIY guide</span></span>
+        <svg class="choice__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+      <li><a class="choice" data-etsy="kit" href="#" target="_blank" rel="noopener">
+        <img src="assets/img/white-gold-table-swag.jpg" alt="">
+        <span><strong>Starter kit</strong><span>Stick, guide, ribbon and tulle for one piece</span></span>
+        <svg class="choice__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+      <li><a class="choice" data-etsy="finished" href="#" target="_blank" rel="noopener">
+        <img src="assets/img/emerald-bells-door-hanger.jpg" alt="">
+        <span><strong>Finished piece</strong><span>Made by our family, ready to hang or set out</span></span>
+        <svg class="choice__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </a></li>
+    </ul>
+    <p class="order-dialog__soon" role="status" hidden>Our Etsy shop opens soon. Leave your email in "Not ready to order?" and we'll tell you when it's live.</p>
+    <p class="order-dialog__all"><a data-etsy="shop" href="#" target="_blank" rel="noopener">Browse the whole Etsy shop</a></p>
+  </dialog>
+
+  <script src="main.js"></script>
+</body>
+</html>
