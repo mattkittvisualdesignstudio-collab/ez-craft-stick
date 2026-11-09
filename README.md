@@ -27,7 +27,7 @@ It's plain HTML, CSS and JavaScript: no framework and no build step. To preview 
 - [ ] **Idea images.** The "One stick, a look for every season" cards use drawn placeholders. Swap each one for an idea image when you have it, and keep the "Idea" badge.
 - [ ] **Reels.** The "Watch one come together" section is in the page but hidden. When the videos and Instagram account exist, remove `hidden` from that section.
 - [ ] **Makers page.** `makers.html` has placeholders for names, a photo and a quote. Link it from the nav or footer when it's ready.
-- [ ] **Content review, items 8 to 22.** Wording fixes from the Nov 8 content check (site, guide, makers page and Etsy plan) are waiting for a go-ahead.
+- [ ] **Guide step 6C photo.** Steps 6A and 6C use the same photo (carried over from the original guide). Swap in a separate 6C photo if one exists.
 - [ ] **Car seat warning.** Have the wording checked by someone who knows product liability.
 - [ ] **Real product photo.** The stick image is rendered from the 3D model. Swap in a real photo of a black stick when you have one.
 - [ ] **Domain.** Point a domain at whichever host you choose.
