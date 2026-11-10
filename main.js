@@ -144,7 +144,7 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 // and keeps a list in the Formspree dashboard.
 // TODO: paste the form's endpoint from Formspree here, for example "https://formspree.io/f/abcdwxyz".
 // While it's empty, the form only shows the thank-you message and nothing is saved.
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://formspree.io/f/xljjqbww";
 
 (() => {
   const form = document.getElementById("signup");
