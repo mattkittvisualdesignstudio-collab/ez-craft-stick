@@ -140,7 +140,10 @@ const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").match
 })();
 
 // ---------- Updates sign-up ----------
-// TODO: set FORM_ENDPOINT to a mailing list or form service.
+// Sign-ups go to Formspree (formspree.io), which emails each one to the business inbox
+// and keeps a list in the Formspree dashboard.
+// TODO: paste the form's endpoint from Formspree here, for example "https://formspree.io/f/abcdwxyz".
+// While it's empty, the form only shows the thank-you message and nothing is saved.
 const FORM_ENDPOINT = "";
 
 (() => {
@@ -157,7 +160,7 @@ const FORM_ENDPOINT = "";
     err.hidden = true; email.setAttribute("aria-invalid", "false");
     if (FORM_ENDPOINT) {
       try {
-        const res = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: email.value.trim() }) });
+        const res = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify({ email: email.value.trim(), source: "Website: Not ready to order?", _subject: "New EZ Craft Stick sign-up" }) });
         if (!res.ok) throw new Error(res.status);
       } catch {
         done.textContent = "Your sign-up didn't go through. Check your connection and try again.";
