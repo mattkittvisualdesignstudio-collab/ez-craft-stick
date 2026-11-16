@@ -6,7 +6,7 @@
 // Each section link comes from opening that section in the shop and copying the address,
 // which ends in ?section_id= followed by a number.
 const ETSY = {
-  shop: "", "https://gmadco.etsy.com"
+  shop: "https://gmadco.etsy.com",
   stick: "",    // section: EZ Craft Sticks
   finished: "", // section: Finished pieces
 };
