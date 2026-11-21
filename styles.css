@@ -321,6 +321,7 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); }
 .pieces__head, .ideas__head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; margin-bottom: 2rem; }
 .pieces__head h2, .ideas__head h2 { font-size: var(--step-3); }
 .pieces__head p, .ideas__head p { color: var(--ink-soft); margin: 0; }
+.pieces__head .real-label { display: inline-block; margin: 0 0 0.6rem; padding: 0.2rem 0.65rem; border: 1px solid var(--ribbon); border-radius: 999px; color: var(--ribbon); font-size: var(--step--1); font-weight: 600; letter-spacing: 0.02em; }
 .mosaic { container-type: inline-size; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: calc((100cqw - 18px) / 4 * 1.25); grid-auto-flow: dense; gap: 6px; }
 .tile { position: relative; margin: 0; overflow: hidden; border-radius: 6px; background: var(--tulle); }
 .tile--wide { grid-column: span 2; }
