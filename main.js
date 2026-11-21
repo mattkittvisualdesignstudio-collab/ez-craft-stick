@@ -1,10 +1,10 @@
 // EZ Craft Stick: page behavior (prototype)
 
 // ---------- Etsy links ----------
-// TODO: paste the real Etsy links here once the shop is set up.
-// shop: the shop's home page, for example "https://www.etsy.com/shop/YourShopName"
-// Each section link comes from opening that section in the shop and copying the address,
-// which ends in ?section_id= followed by a number.
+// shop: GmaDCo, the family's Etsy shop.
+// stick and finished: leave empty until those shop sections have listings. While empty,
+// those choices open the shop's home page. To fill one in, open that section in the shop
+// and copy the address, which ends in ?section_id= followed by a number.
 const ETSY = {
   shop: "https://gmadco.etsy.com",
   stick: "",    // section: EZ Craft Sticks

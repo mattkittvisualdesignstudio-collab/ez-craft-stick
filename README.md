@@ -20,7 +20,7 @@ It's plain HTML, CSS and JavaScript: no framework and no build step. To preview 
 
 ## Before it goes live
 
-- [ ] **Etsy links.** Paste the shop link and the two section links (sticks, finished pieces) into `ETSY` at the top of `main.js`. Until then the order pop-up says the shop opens soon. When the shop is live, change "Our shop is opening soon on Etsy" back to "Our shop is on Etsy."
+- [ ] **Etsy links.** The shop link is in (`https://gmadco.etsy.com`, GmaDCo). Still to do: once the shop has "EZ Craft Sticks" and "Finished pieces" sections with listings, paste each section's link into `ETSY` at the top of `main.js`; until then both choices open the shop's home page. When listings are live, change "Our shop is opening soon on Etsy" to "Our shop is on Etsy."
 - [ ] **Email the DIY guide to buyers.** The stick ships without a printed guide. For now buyers get it as a download. Next step: send it by email automatically after each order. Simple options are a link in Etsy's message to buyers on each receipt, a small card in the package with a QR code to the guide, or an email service connected to the website.
 - [ ] **Supply kits on Amazon (affiliate).** No kits are built or sold here. Instead, make a kits page that groups ribbon, tulle and accents as Amazon affiliate links, and point the "Supply kits are coming soon" note in the order pop-up at it. Amazon requires the line "As an Amazon Associate I earn from qualifying purchases" on any page with those links.
 - [x] **Connect the sign-up form to Formspree.** Done (form xljjqbww). Still to do: in Formspree, open the project's Settings tab and set "Restrict to Domain" to `ez-craft-stick.vercel.app`.
